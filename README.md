@@ -105,6 +105,7 @@ You can interact with this project in two ways: by running it locally using Dock
 The application is hosted on AWS and can be accessed directly through your browser.
 
 -   **Application URL:** http://ec2-3-108-235-165.ap-south-1.compute.amazonaws.com/
+
 **NOTE:** The url might change depending on the IP address and AWS region.
 
 ### Option 2: Run Locally with Docker
