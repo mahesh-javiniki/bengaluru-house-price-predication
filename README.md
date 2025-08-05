@@ -2,6 +2,9 @@
 
 This project predicts house prices in Bengaluru, India, using a machine learning model. It provides a web interface where users can get an estimated price by providing details such as location, square footage, and the number of bedrooms and bathrooms.
 
+## 🎥 Live Demo
+![Project Demo](demo/demo-gif.gif)
+
 ## ✨ Features
 
 - **Accurate Price Prediction:** Utilizes a linear regression model trained on a comprehensive dataset.
