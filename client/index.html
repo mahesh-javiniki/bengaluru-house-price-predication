@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>🏠 Bengaluru House Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="img"></div>
+
+<!-- Header Section -->
+<div class="header-section">
+    <h1>🏠 Bengaluru House Price Predictor</h1>
+    <p class="subtitle">Get accurate price estimates for residential properties in Bengaluru</p>
+    <div class="info-box">
+        <h3>📊 What We Analyze</h3>
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="icon">📐</span>
+                <span>Property Size (Sq Ft)</span>
+            </div>
+            <div class="info-item">
+                <span class="icon">🛏️</span>
+                <span>Number of Bedrooms</span>
+            </div>
+            <div class="info-item">
+                <span class="icon">🚿</span>
+                <span>Number of Bathrooms</span>
+            </div>
+            <div class="info-item">
+                <span class="icon">📍</span>
+                <span>Location in Bengaluru</span>
+            </div>
+        </div>
+        <p class="description">Our ML model analyzes these key factors to provide you with an estimated market price in lakhs (₹)</p>
+    </div>
+</div>
+
+<form class="form">
+    <h2>🏡 House Details</h2>
+    <div class="input-section">
+        <div class="input-group">
+            <h3>📍 Location</h3>
+            <select class="location" name="" id="uiLocations">
+                <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+                <option>Electronic City</option>
+                <option>Rajaji Nagar</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <h3>📐 Area (Square Feet)</h3>
+            <input class="area" type="number" id="uiSqft" name="Squareft" value="1000" placeholder="Min 300 sq ft" min="300" step="1">
+            <small class="input-hint">Minimum area required: 300 sq ft</small>
+        </div>
+
+        <div class="input-group">
+            <h3>🛏️ BHK (Bedrooms)</h3>
+            <div class="switch-field">
+                <input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+                <label for="radio-bhk-1">1</label>
+                <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+                <label for="radio-bhk-2">2</label>
+                <input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+                <label for="radio-bhk-3">3</label>
+                <input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+                <label for="radio-bhk-4">4</label>
+                <input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+                <label for="radio-bhk-5">5</label>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <h3>🚿 Bathrooms</h3>
+            <div class="switch-field">
+                <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+                <label for="radio-bath-1">1</label>
+                <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+                <label for="radio-bath-2">2</label>
+                <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+                <label for="radio-bath-3">3</label>
+                <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+                <label for="radio-bath-4">4</label>
+                <input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+                <label for="radio-bath-5">5</label>
+            </div>
+        </div>
+    </div>
+
+    <button class="submit" onclick="onClickedEstimatePrice()" type="button">🔮 Get Price Estimate</button>
+    <div id="uiEstimatedPrice" class="result"><h2></h2></div>
+</form>
+</body>
+</html>
